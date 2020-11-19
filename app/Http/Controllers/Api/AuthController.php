@@ -10,46 +10,47 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    
+
     function login(Request $request) {
-        
+
         $request->validate([
-            'email' => 'required|email',
+            'PhoneNumber' => 'required|PhoneNumber',
             'password' => 'required',
             'device_name' => 'required',
         ]);
-    
-        $user = User::where('email', $request->email)->first();
-    
+
+        $user = User::where('PhoneNumber', $request->PhoneNumber)->first();
+
         if (! $user || ! Hash::check($request->password, $user->password)) {
             throw ValidationException::withMessages([
-                'email' => ['The provided credentials are incorrect.'],
+                'PhoneNumber' => ['The provided credentials are incorrect.'],
             ]);
         }
-    
-       
+
+
         $token = $user->createToken($request->device_name, ['role:list'])->plainTextToken;
         $response = [
             'user' => $user,
-            'token' => $token
+            'token' => $token,
+            'code'=>200,
         ];
 
         return response($response, 201);
     }
 
     function registration(Request $request) {
-        
+
         $request->validate([
             'email' => 'required|email',
             'name'=>'required',
             'password' => 'required',
         ]);
-    
+
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
-    
+
         $user = User::create($input);
-        
+
         $response = [
             'message' => "Sucess",
         ];
