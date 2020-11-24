@@ -42,6 +42,63 @@
                 </tr>
           </table>
 
+          <div class="form-group">
+              <label>Rashi </label>
+          </div>
+
+          <table class="table table-bordered"  width="100%" >
+                <tr>
+                    <th><label>Mesh   </label></th>
+                    <th><input class="form-control" type="text" name='Mesh' value="{{$dinRashi[0]->Mesh}}" ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Vrushabh   </label></th>
+                    <th><input class="form-control" type="text" name='Vrushabh' value="{{$dinRashi[0]->Vrushabh}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Mithun   </label></th>
+                    <th><input class="form-control" type="text" name='Mithun' value="{{$dinRashi[0]->Mithun}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Kark   </label></th>
+                    <th><input class="form-control" type="text" name='Kark' value="{{$dinRashi[0]->Kark}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Sinh   </label></th>
+                    <th><input class="form-control" type="text" name='Sinh' value="{{$dinRashi[0]->Sinh}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Kanya   </label></th>
+                    <th><input class="form-control" type="text" name='Kanya' value="{{$dinRashi[0]->Kanya}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Tula   </label></th>
+                    <th><input class="form-control" type="text" name='Tula'  value="{{$dinRashi[0]->Tula}}" ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Vrushchik   </label></th>
+                    <th><input class="form-control" type="text" name='Vrushchik' value="{{$dinRashi[0]->Vrushchik}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Dhanu   </label></th>
+                    <th><input class="form-control" type="text" name='Dhanu' value="{{$dinRashi[0]->Dhanu}}"  ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Kumbha   </label></th>
+                    <th><input class="form-control" type="text" name='Kumbha' value="{{$dinRashi[0]->Kumbha}}"  ></th>
+                </tr>
+
+          </table>
+
                 
             <button type="submit" class="btn-primary btn-lg">Add </button>
 

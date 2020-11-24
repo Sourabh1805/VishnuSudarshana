@@ -47,11 +47,29 @@ class CalendarController extends Controller
         $data['Rahu_Kal'] = $input['Rahu_Kal'];
         $data['Ketu_kal'] = $input['Ketu_kal'];
         array_push($dinvishesh, $data);
+
+
+        $dinRashi = array();
+        $Rahidata['Mesh'] = $input['Mesh'];
+        $Rahidata['Vrushabh'] = $input['Vrushabh'];
+        $Rahidata['Mithun'] = $input['Mithun'];
+        $Rahidata['Kark'] = $input['Kark'];
+        $Rahidata['Sinh'] = $input['Sinh'];
+        $Rahidata['Kanya'] = $input['Kanya'];
+        $Rahidata['Tula'] = $input['Tula'];
+        $Rahidata['Vrushchik'] = $input['Vrushchik'];
+        $Rahidata['Dhanu'] = $input['Dhanu'];
+        $Rahidata['Makar'] = $input['Makar'];
+        $Rahidata['Kumbha'] = $input['Kumbha'];
+        $Rahidata['Meen'] = $input['Meen'];
+
+        array_push($dinRashi, $Rahidata);
         
 
         $varCalendar = new Calendar([
             'Calendar_date'=> $request->get('Date'),
             'Calendar_dinVishesh'=> json_encode($dinvishesh),
+            'Calendar_dinRashi'=>json_encode($dinRashi),
             ]);
         $varCalendar->save();
 
@@ -80,8 +98,9 @@ class CalendarController extends Controller
     {
         $Calendar = Calendar::find($id);
         $dinvishesh = json_decode($Calendar['Calendar_dinVishesh']);
-        //print_r( $dinvishesh[0]->Rahu_Kal);
-        return view('Calendar/edit', compact('Calendar','dinvishesh'));
+        $dinRashi = json_decode($Calendar['Calendar_dinRashi']);
+        
+        return view('Calendar/edit', compact('Calendar','dinvishesh','dinRashi'));
     }
 
     /**

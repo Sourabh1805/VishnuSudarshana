@@ -23,7 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','RoleController');
     Route::resource('users','UserController');
+    Route::resource('slots', 'SlotController');
 });
 
 Route::resource('calendar', 'Web\CalendarController');
-Route::resource('Daily', 'Web\DailyRashiContrller');
+Route::resource('service', 'Web\ServiceConteroller');

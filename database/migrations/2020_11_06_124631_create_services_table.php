@@ -19,6 +19,9 @@ class CreateServicesTable extends Migration
             $table->string('Service_description');
             $table->string('Service_prize');
             $table->string('Service_status')->default(0);
+            $table->string('Service_image1');
+            $table->string('Service_image2')->nullable(); 
+            $table->string('Service_image3')->nullable();
             $table->timestamps();
         });
     }

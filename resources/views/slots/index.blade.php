@@ -11,26 +11,24 @@
 <thead>
                             <tr>
                               <th>Date</th>
-                              <th>Din Vishesh</th>
-                              <th>Din Rashi</th>
+                              <th>Available</th>
+                              <th>number</th>
                               <th>Action</th>
                             </tr>
 </thead>  
-                        @foreach($calendar as $row)
+                        @foreach($slots as $row)
                         <tr>
-                        <td>{{$row->Calendar_date}}</td>
-                        <?php 
-                            $dinVishesh = json_decode($row->Calendar_dinVishesh);
-                        ?>
+                        <td>{{$row->Slot_date}}</td>
                         
-                        <td>{{$dinVishesh[0]->Rahu_Kal}}</td>
+                        
+                        <td>{{$row->Slot_is_available}}</td>
                         
 
                         
-                        <td>{{$row->Calendar_dinRashi}}</td>
+                        <td>{{$row->Slot_appointment_number}}</td>
                         
                          <td>
-                         <a class="btn btn-primary" href="{{ route('calendar.edit',$row->Calendar_id) }}">Edit</a>
+                         <a class="btn btn-primary" href="{{ route('slots.edit',$row->Slot_id) }}">Delete</a>
                         </td>
                         </tr>
                         @endforeach
@@ -38,7 +36,7 @@
                
                 <br>
                 <br>
-                <a href="{{url('calendar/create')}}" class="btn-primary btn-lg"> Add Date </a>
+                <a href="{{url('slots/create')}}" class="btn-primary btn-lg"> Add Date </a>
 
             </div>
       

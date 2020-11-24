@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Web;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DailyRashiContrller extends Controller
+class VendorDetails extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +14,7 @@ class DailyRashiContrller extends Controller
      */
     public function index()
     {
-      $calendar = DB::table('calendars')->get()->toArray();
-      return view('Calendar/index', compact('calendar'));
+        //
     }
 
     /**

@@ -41,6 +41,72 @@
                 </tr>
           </table>
 
+          <div class="form-group">
+              <label>Rashi </label>
+          </div>
+
+          <table class="table table-bordered"  width="100%" >
+                <tr>
+                    <th><label>Mesh   </label></th>
+                    <th><input class="form-control" type="text" name='Mesh' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Vrushabh   </label></th>
+                    <th><input class="form-control" type="text" name='Vrushabh' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Mithun   </label></th>
+                    <th><input class="form-control" type="text" name='Mithun' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Kark   </label></th>
+                    <th><input class="form-control" type="text" name='Kark' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Sinh   </label></th>
+                    <th><input class="form-control" type="text" name='Sinh' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Kanya   </label></th>
+                    <th><input class="form-control" type="text" name='Kanya' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Tula   </label></th>
+                    <th><input class="form-control" type="text" name='Tula' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Vrushchik   </label></th>
+                    <th><input class="form-control" type="text" name='Vrushchik' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Dhanu   </label></th>
+                    <th><input class="form-control" type="text" name='Dhanu' ></th>
+                </tr>
+                <tr>
+                    <th><label>Makar   </label></th>
+                    <th><input class="form-control" type="text" name='Makar' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Kumbha   </label></th>
+                    <th><input class="form-control" type="text" name='Kumbha' ></th>
+                </tr>
+
+                <tr>
+                    <th><label>Meen   </label></th>
+                    <th><input class="form-control" type="text" name='Meen' ></th>
+                </tr>
+
+          </table>
+
                 
                         <button type="submit" class="btn-primary btn-lg">Add </button>
 

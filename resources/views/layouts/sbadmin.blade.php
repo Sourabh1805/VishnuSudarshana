@@ -59,6 +59,16 @@ Users
 calendar
 </a>
 
+<a class="nav-link" href="{{url('service')}}">
+<div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+service
+</a>
+
+
+<a class="nav-link" href="{{url('slots')}}">
+<div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+Slots
+</a>
 
 
 </div>
